@@ -1,6 +1,6 @@
 <script>
     import BarChart from '../components/BarChart.svelte';
-  </script>
+</script>
   
   <main>
     <h1>Welkom bij de Tech Track Visualisatie</h1>
