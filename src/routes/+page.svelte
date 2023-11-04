@@ -3,6 +3,6 @@
   </script>
   
   <main>
-    <h1>Welkom bij de Tech Track Visualisatie</h1>
+    <h1>Welkom bij de Tech Track Visualisatie TEST</h1>
     <BarChart />
   </main>
