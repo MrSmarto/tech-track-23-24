@@ -8,13 +8,15 @@
     function handleTimeChange(event) {
       onFilterChange({ type: 'time', value: event.target.value });
     }
-  </script>
+</script>
   
   <select on:change={handleRegionChange}>
-    <!-- Opties voor regio's -->
+    <option value="">Kies een regio</option>
+    {/* Voeg hier opties toe voor elke regio */}
   </select>
   
   <select on:change={handleTimeChange}>
-    <!-- Opties voor tijd -->
-  </select>
+    <option value="">Kies een periode</option>
+    {/* Voeg hier opties toe voor tijdperiodes */}
+</select>
   

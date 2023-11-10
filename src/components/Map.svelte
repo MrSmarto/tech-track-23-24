@@ -2,14 +2,25 @@
     import { onMount } from 'svelte';
     import * as d3 from 'd3';
   
-    export let data;
+    export let data; // Je data
   
-    onMount(() => {
-      // Hier komt de logica voor het tekenen van je kaart
-      // Je moet een SVG-element in je markup hebben
-      // Gebruik D3 om de kaart te tekenen en data te binden
+    onMount(async () => {
+      // Laden van GeoJSON-data (vervang met de URL naar je GeoJSON-bestand)
+      const geojsonData = await d3.json('path_to_your_geojson_file.json');
+  
+      const svg = d3.select('#choropleth-map');
+      const projection = d3.geoMercator().fitSize([500, 400], geojsonData);
+      const pathGenerator = d3.geoPath().projection(projection);
+  
+      // Teken de kaart
+      svg.selectAll('path')
+        .data(geojsonData.features)
+        .enter()
+        .append('path')
+        .attr('d', pathGenerator)
+        .attr('fill', 'steelblue'); // Basisvulling, pas dit aan op basis van je data
     });
   </script>
   
-  <svg id="choropleth-map"></svg>
+  <svg id="choropleth-map" width="500" height="400"></svg>
   
