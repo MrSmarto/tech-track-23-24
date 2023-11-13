@@ -6,7 +6,7 @@
   
     onMount(async () => {
       // Laden van GeoJSON-data (vervang met de URL naar je GeoJSON-bestand)
-      const geojsonData = await d3.json('path_to_your_geojson_file.json');
+      const geojsonData = await d3.json('../static/JSON/');
   
       const svg = d3.select('#choropleth-map');
       const projection = d3.geoMercator().fitSize([500, 400], geojsonData);
