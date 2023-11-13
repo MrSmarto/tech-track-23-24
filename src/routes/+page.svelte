@@ -1,25 +1,15 @@
 <script>
     import Map from '../components/Map.svelte';
     import Filters from '../components/Filters.svelte';
-    import { fetchData } from '../services/dataService';
-  
-    let data = [];
-    let filteredData = [];
-  
-    async function loadData() {
-      data = await fetchData();
-      filteredData = data; // Begin met alle data
-    }
-  
+
+    let geojsonUrl = '/geojson/gemeente_gegeneraliseerd.geojson'; // Standaard GeoJSON URL
+
     function handleFilterChange(filter) {
-      // Pas hier je filtering toe op basis van de ontvangen filterparameter
-      // Update de filteredData op basis van de filter
+      if (filter.type === 'region') {
+        geojsonUrl = `/geojson/${filter.value}_gegeneraliseerd.geojson`;
+      }
     }
-  
-    // Roep loadData aan bij het starten van de component
-    loadData();
-  </script>
-  
-  <Filters onFilterChange={handleFilterChange} />
-  <Map {filteredData} />
-  
+</script>
+
+<Filters onFilterChange={handleFilterChange} />
+<Map {geojsonUrl} />
