@@ -1,8 +1,9 @@
 <script>
     import Map from '../components/Map.svelte';
     import Filters from '../components/Filters.svelte';
+    import '../app.css';
 
-    let geojsonUrl = '/geojson/gemeente_gegeneraliseerd.geojson'; // Standaard GeoJSON URL
+    let geojsonUrl = 'static/geojson/gemeente_gegeneraliseerd.geojson'; // Standaard GeoJSON URL
 
     function handleFilterChange(filter) {
       if (filter.type === 'region') {
