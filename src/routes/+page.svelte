@@ -36,18 +36,19 @@
     "Nov",
     "Dec",
   ];
+
   // Definities voor de bereiken van de legenda voor gemeenten en provincies
   let rangeValuesGemeente = [
-    { value: 500000, label: "500,000 - 999,999+", color: "#800026" },
-    { value: 100000, label: "100,000 - 499,999", color: "#BD0026" },
-    { value: 40000, label: "40,000 - 99,999", color: "#E31A1C" },
-    { value: 20000, label: "20,000 - 39,999", color: "#FC4E2A" },
-    { value: 10000, label: "10,000 - 19,999", color: "#FD8D3C" },
-    { value: 7500, label: "7,500 - 9,999", color: "#FEB24C" },
-    { value: 5000, label: "5,000 - 7,499", color: "#FED976" },
-    { value: 2500, label: "2,500 - 4,999", color: "#FFEDA0" },
-    { value: 1000, label: "1,000 - 2,499", color: "#C7E9B4" },
-    { value: 0, label: "0 - 999", color: "#E5F5E0" },
+    { value: 750000, label: "750,000 - 999,999+", color: "#800026" },
+    { value: 600000, label: "600,000 - 749,999", color: "#BD0026" },
+    { value: 350000, label: "350,000 - 599,999", color: "#E31A1C" },
+    { value: 150000, label: "150,000 - 349,999", color: "#FC4E2A" },
+    { value: 75000, label: "75,000 - 149,999", color: "#FD8D3C" },
+    { value: 30000, label: "30,000 - 74,999", color: "#FEB24C" },
+    { value: 20000, label: "20,000 - 29,999", color: "#FED976" },
+    { value: 10000, label: "10,000 - 19,999", color: "#FFEDA0" },
+    { value: 4000, label: "4,000 - 9,999", color: "#C7E9B4" },
+    { value: 0, label: "0 - 3,999", color: "#E5F5E0" },
   ];
 
   // Definities voor de bereiken van de legenda voor gemeenten en provincies
@@ -74,7 +75,7 @@
 
   // 5. Lifecycle hooks en functies
   // Functie die uitgevoerd wordt zodra de component is gemount in de DOM
-  // !!! BELANGRIJK DAT DE LEAFLET WORDT GEIMPOTEERD IN DE onMount IVM NIET COMPATIBEL MET DE SERVER-SIDE RENDERING !!!
+  // !!! BELANGRIJK DAT DE LEAFLET WORDT GEIMPOTEERD IN DE onMount IVM NIET COMPATABEL MET DE SERVER-SIDE RENDERING !!!
   onMount(async () => {
     if (typeof window !== "undefined") {
       // Dynamisch importeren van Leaflet en de bijbehorende CSS
@@ -266,42 +267,42 @@
       return population > 3500000
         ? "#800026"
         : population > 3000000
-        ? "#BD0026"
-        : population > 2500000
-        ? "#E31A1C"
-        : population > 2000000
-        ? "#FC4E2A"
-        : population > 1500000
-        ? "#FD8D3C"
-        : population > 1000000
-        ? "#FEB24C"
-        : population > 750000
-        ? "#FED976"
-        : population > 500000
-        ? "#FFEDA0"
-        : population > 250000
-        ? "#C7E9B4"
-        : "#E5F5E0";
+          ? "#BD0026"
+          : population > 2500000
+            ? "#E31A1C"
+            : population > 2000000
+              ? "#FC4E2A"
+              : population > 1500000
+                ? "#FD8D3C"
+                : population > 1000000
+                  ? "#FEB24C"
+                  : population > 750000
+                    ? "#FED976"
+                    : population > 500000
+                      ? "#FFEDA0"
+                      : population > 250000
+                        ? "#C7E9B4"
+                        : "#E5F5E0";
     } else {
-      return population > 500000
+      return population > 750000
         ? "#800026"
-        : population > 100000
-        ? "#BD0026"
-        : population > 40000
-        ? "#E31A1C"
-        : population > 20000
-        ? "#FC4E2A"
-        : population > 10000
-        ? "#FD8D3C"
-        : population > 7500
-        ? "#FEB24C"
-        : population > 5000
-        ? "#FED976"
-        : population > 2500
-        ? "#FFEDA0"
-        : population > 1000
-        ? "#C7E9B4"
-        : "#E5F5E0";
+        : population > 600000
+          ? "#BD0026"
+          : population > 350000
+            ? "#E31A1C"
+            : population > 150000
+              ? "#FC4E2A"
+              : population > 75000
+                ? "#FD8D3C"
+                : population > 30000
+                  ? "#FEB24C"
+                  : population > 20000
+                    ? "#FED976"
+                    : population > 10000
+                      ? "#FFEDA0"
+                      : population > 4000
+                        ? "#C7E9B4"
+                        : "#E5F5E0";
     }
   }
 
@@ -397,7 +398,9 @@
   }
 </script>
 
+<!-- Alle HTML componenten -->
 <div class="your-main-container">
+  <!-- Bevat de slider-controls voor jaar en maand, inclusief de logica voor het aanpassen van de slider-waarde. -->
   <OverlayControlsComponent
     {toggleMode}
     {adjustSliderValue}
@@ -408,19 +411,25 @@
     {monthNames}
   />
 
+  <!-- Bevat de titel van de pagina. -->
   <TitleComponent />
 
+  <!-- Bevat de knoppen om te schakelen tussen de gemeente- en provincielagen. -->
   <LayerSwitchComponent {layerTypes} {switchLayer} {currentLayerType} />
 
+  <!-- Bevat de legenda voor de kaart. -->
   <LegendComponent {rangeValues} />
 
-  <button class="info-button" on:click={toggleOverlay}>i</button>
-
+  <!-- Bevat de overlay-inhoud die wordt getoond/verborgen. -->
   <OverlayComponent {showOverlay} {toggleOverlay} />
 
+  <!-- Bevat de Leaflet-kaart. -->
   <MapComponent />
+
+  <button class="info-button" on:click={toggleOverlay}>i</button>
 </div>
 
+<!-- De styling van alle componenten -->
 <style>
   @import "../styles/Global.css";
 </style>
