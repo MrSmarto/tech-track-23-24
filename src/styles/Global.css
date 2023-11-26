@@ -1,0 +1,278 @@
+  /* Algemene stijl voor overlay-controls zoals slider en jaar/maand knoppen */
+  .overlay-controls {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Zorgt dat het element bovenaan in de stapelvolgorde staat */
+    background: white;
+    padding: 10px;
+    border-radius: 5px; /* Afgeronde hoeken */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Schaduweffect */
+  }
+
+  /* Stijl voor de groepering van slider-controls */
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Ruimte tussen elementen */
+  }
+
+  /* Stijl voor de individuele slider-buttons */
+  .slider-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Standaardstijl voor slider-buttons */
+  .slider-buttons button {
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Vloeiende overgang voor hover-effect */
+  }
+
+  /* Hover-effect voor slider-buttons */
+  .slider-buttons button:hover {
+    background-color: #007bff; /* Verandering van achtergrondkleur bij hover */
+    color: white;
+  }
+
+  /* Stijl voor de weergave van jaar/maand */
+  .year-month-display {
+    margin: 0 10px;
+  }
+
+  /* Stijl voor de slider zelf */
+  .year-slider {
+    margin: 0 10px;
+  }
+
+  /* Stijl voor actieve en inactieve jaar/maand knoppen */
+  .active,
+  .inactive {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Stijl voor actieve knoppen (jaar/maand) */
+  .active {
+    background-color: #007bff;
+    color: white;
+  }
+
+  /* Stijl voor inactieve knoppen (jaar/maand) */
+  .inactive {
+    background-color: #ccc;
+    color: black;
+  }
+
+  /* Hover-effect voor inactieve knoppen */
+  .inactive:hover {
+    background-color: #007bff;
+    color: white;
+  }
+
+  /* Speciale stijl voor de jaar-knop wanneer maand-knop actief is */
+  .inactive-with-year {
+    background-color: #007bff;
+    color: black;
+  }
+
+  /* Stijl voor de titelcontainer bovenaan de pagina */
+  .title-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Stijl voor de titeltekst */
+  .title {
+    background-color: white;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* Stijl voor de knoppen om te schakelen tussen gemeente en provincie */
+  .layer-switch-buttons {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Standaardstijl voor knoppen binnen layer-switch-buttons */
+  .layer-switch-buttons button {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 4px 4px;
+    cursor: pointer;
+    width: 150px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover-effect voor niet-geselecteerde knoppen */
+  .layer-switch-buttons button:not(.selected):hover {
+    background-color: #007bff;
+    color: white;
+  }
+
+  /* Stijl voor geselecteerde knop */
+  .layer-switch-buttons button.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+  /* Stijl voor de legenda */
+  .legend {
+    position: absolute;
+    left: 17px;
+    top: 42.5%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 200px;
+  }
+
+  /* Stijl voor de subtitel in de legenda */
+  .legend .subtitle {
+    text-align: left; /* Links uitlijnen */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  /* Stijl voor labels (aantallen) in de legenda */
+  .legend .label {
+    flex-grow: 1;
+    text-align: left; /* Tekst links uitlijnen */
+  }
+
+  /* Stijl voor items in de legenda, verdeelt ruimte tussen tekst en iconen */
+  .legend .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  /* Stijl voor de iconen in de legenda */
+  .legend .legend-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-left: 8px; /* Ruimte naast de iconen */
+    opacity: 0.7;
+    border: 2px solid transparent; /* Voeg een transparante rand toe */
+    border-radius: 50%; /* Behoud de cirkelvorm */
+    order: 2; /* Plaatst de iconen aan de rechterkant */
+  }
+
+  /* Stijl voor de informatieknop */
+  .info-button {
+    border-radius: 5px;
+    font-size: 20px;
+    position: absolute;
+    top: 85px;
+    left: 17.5px;
+    padding: 5px 13px;
+    z-index: 1001;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  /* Hover-effect voor de informatieknop */
+  .info-button:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Stijl voor de overlay */
+  .overlay {
+    position: absolute;
+    top: 85px;
+    left: 17.5px;
+    width: 294px;
+    height: 554px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1005;
+    overflow-y: auto; /* Zorgt voor scrollbaarheid bij veel inhoud */
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* Stijl voor de inhoud van de overlay */
+  .overlay-content {
+    text-align: center;
+    padding-left: 20px; /* Voegt witruimte toe aan de linkerkant */
+    padding-right: 20px; /* Voegt witruimte toe aan de rechterkant */
+  }
+
+  /* Stijl voor de sluitknop van de overlay */
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 2px 9px;
+    color: white;
+    background-color: black;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .close-button:hover {
+    background-color: #f0f0f0;
+    color: black;
+  }
+
+  .overlay-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .h2-overlay {
+    margin-top: -3px;
+  }
+
+  /* Stijl voor cursieve tekst */
+  .italic {
+    font-style: italic;
+  }
+
+  /* Stijl voor de kaartcontainer */
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Algemene stijl voor knoppen */
+  button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
