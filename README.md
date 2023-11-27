@@ -1,6 +1,6 @@
 # Projectnaam: Nederlandse Bevolkingsontwikkeling Kaart
 
-![Interactieve kaart](https://github.com/MrSmarto/tech-track-23-24/assets/118122875/5996424e-12fc-428c-be36-147cc090deb9)
+![Interactieve kaart (1500 x 750 px)](https://github.com/MrSmarto/tech-track-23-24/assets/118122875/710a4adc-ee29-4a8e-9e6e-d0fed0b33ce4)
 
 ## Beschrijving
 Dit project visualiseert de bevolkingsontwikkeling in Nederland via een interactieve kaart. Het gebruikt moderne webtechnologieën zoals Svelte en Leaflet om gebruikers een intuïtieve en gedetailleerde blik te bieden op demografische veranderingen.
