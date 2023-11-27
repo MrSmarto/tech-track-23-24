@@ -75,7 +75,10 @@
         verschillende functies te verkennen. Voor vragen of feedback kun je
         contact met mij opnemen via <span class="italic"
           >[https://github.com/MrSmarto]</span
-        >.
+        >.<br /><br />
+        Gemaakt door:<br /><br /><strong>Thijmen Smart</strong><br /><strong
+          >500874123</strong
+        ><br /><strong>Information Design-Tech</strong>
       </p>
     </div>
   </div>
