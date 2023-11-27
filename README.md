@@ -1,4 +1,4 @@
-# Projectnaam: `Nederlandse Bevolkingsontwikkeling Kaart`
+# Projectnaam: Nederlandse Bevolkingsontwikkeling Kaart
 
 ## Beschrijving
 Dit project visualiseert de bevolkingsontwikkeling in Nederland via een interactieve kaart. Het gebruikt moderne webtechnologieën zoals Svelte en Leaflet om gebruikers een intuïtieve en gedetailleerde blik te bieden op demografische veranderingen.
