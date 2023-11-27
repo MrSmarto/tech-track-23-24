@@ -15,7 +15,42 @@ Dit project visualiseert de bevolkingsontwikkeling in Nederland via een interact
 - JavaScript, HTML, CSS
 
 ## Installatie en Gebruik
-(Leg hier uit hoe het project opgezet en gebruikt kan worden)
+
+Om dit project te installeren en te gebruiken, volg je de onderstaande stappen:
+
+1. **Clone het Repository:**
+   Open je terminal en voer het volgende commando uit om het project te klonen:
+`git clone https://github.com/jouwGithubUsername/nederlandse-bevolkingsontwikkeling-kaart.git`
+
+Vervang `jouwGithubUsername` met je eigen GitHub-gebruikersnaam als je het project hebt geforkt.
+
+2. **Installatie van Afhankelijkheden:**
+Navigeer naar de hoofdmap van het project en installeer de benodigde afhankelijkheden:
+`cd nederlandse-bevolkingsontwikkeling-kaart`
+`npm install`
+
+Dit zal alle benodigde node modules installeren die in `package.json` zijn opgesomd.
+
+3. **Start de Ontwikkelingsserver:**
+Start de lokale ontwikkelingsserver met:
+`npm run dev`
+
+Dit zal de applicatie beschikbaar maken op `http://localhost:3000` (of een andere poort als 3000 bezet is).
+
+4. **Open de Applicatie:**
+Open je webbrowser en ga naar `http://localhost:3000` om de applicatie te bekijken.
+
+5. **Gebruik van de Applicatie:**
+- Interacteer met de kaart om in te zoomen op specifieke gebieden.
+- Gebruik de slider om de bevolkingsdata van verschillende jaren of maanden te bekijken.
+- Schakel tussen de weergave van gemeenten en provincies.
+- Klik op de informatieknop om meer over het project te weten te komen.
+
+6. **Bouw voor Productie:**
+Wanneer je klaar bent voor productie, gebruik dan:
+`npm run build`
+
+Dit genereert een geoptimaliseerde versie van de applicatie in de `build`-map.
 
 ## Bijdragen
 Bijdragen aan dit project zijn welkom. Neem contact op via [GitHub](https://github.com/Gebruikersnaam)
@@ -24,7 +59,10 @@ Bijdragen aan dit project zijn welkom. Neem contact op via [GitHub](https://gith
 Dit project is gelicenseerd onder de MIT License - zie het LICENSE-bestand voor details.
 
 ## Auteur
-(Jouw Naam of GitHub-handle)
+
+- **Naam:** Thijmen Smart
+- **Studie:** 3e jaars CMD student aan de Hogeschool van Amsterdam (HvA)
+- **GitHub-handle:** [MrSmarto](https://github.com/MrSmarto)
 
 ## Dankbetuigingen
 - OpenStreetMap Contributors
