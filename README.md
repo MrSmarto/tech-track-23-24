@@ -1,38 +1,33 @@
-# create-svelte
+# Projectnaam: Nederlandse Bevolkingsontwikkeling Kaart
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Beschrijving
+Dit project visualiseert de bevolkingsontwikkeling in Nederland via een interactieve kaart. Het gebruikt moderne webtechnologieën zoals Svelte en Leaflet om gebruikers een intuïtieve en gedetailleerde blik te bieden op demografische veranderingen.
 
-## Creating a project
+## Belangrijkste Functionaliteiten
+- Interactieve kaart met zoom- en panmogelijkheden
+- Dynamische weergave van demografische data per gemeente/provincie
+- Tijdlijnslider voor het selecteren van specifieke jaren en maanden
+- Informatieve overlays met details over project en data
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Technologieën Gebruikt
+- Svelte
+- Leaflet
+- JavaScript, HTML, CSS
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Installatie en Gebruik
+(Leg hier uit hoe het project opgezet en gebruikt kan worden)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Bijdragen
+Bijdragen aan dit project zijn welkom. Neem contact op via [GitHub](https://github.com/Gebruikersnaam)
 
-## Developing
+## Licentie
+Dit project is gelicenseerd onder de MIT License - zie het LICENSE-bestand voor details.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Auteur
+(Jouw Naam of GitHub-handle)
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Dankbetuigingen
+- OpenStreetMap Contributors
+- Centraal Bureau voor de Statistiek (CBS)
+- Leaflet Community
+- Svelte Community
