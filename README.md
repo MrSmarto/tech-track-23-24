@@ -74,7 +74,7 @@ De applicatie is gehost op [Vercel](https://vercel.com), een cloudplatform voor 
 
 
 ## Bijdragen
-Bijdragen aan dit project zijn welkom. Neem contact op via [GitHub](https://github.com/Gebruikersnaam)
+Bijdragen aan dit project zijn welkom. Neem contact op via [MrSmarto](https://github.com/MrSmarto)
 
 ## Licentie
 Dit project is gelicenseerd onder de MIT License - zie het LICENSE-bestand voor details.
