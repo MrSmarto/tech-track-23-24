@@ -1,3 +1,4 @@
+  
   /* Algemene stijl voor overlay-controls zoals slider en jaar/maand knoppen */
   .overlay-controls {
     position: absolute;
@@ -6,7 +7,7 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000; /* Zorgt dat het element bovenaan in de stapelvolgorde staat */
+    z-index: 1500; /* Zorgt dat het element bovenaan in de stapelvolgorde staat */
     background: white;
     padding: 10px;
     border-radius: 5px; /* Afgeronde hoeken */
@@ -217,7 +218,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    z-index: 1005;
+    z-index: 2505;
     overflow-y: auto; /* Zorgt voor scrollbaarheid bij veel inhoud */
     transition: opacity 0.5s, visibility 0.5s;
     opacity: 0;

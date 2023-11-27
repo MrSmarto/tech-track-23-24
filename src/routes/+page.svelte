@@ -92,13 +92,9 @@
   // Functie om de kaart te initialiseren met Leaflet
   function initMap(L) {
     console.log("initMap: MapComponent");
-    map = L.map("map", {
-      // Voeg fullscreenControl toe aan de kaart
-      fullscreenControl: true,
-      fullscreenControlOptions: {
-        position: "topleft", // Kies waar de fullscreen-knop verschijnt
-      },
-    }).setView([52.1326, 5.2913], 7);
+
+    // Initialiseren van de Leaflet-kaart
+    map = L.map("map", {}).setView([52.1326, 5.2913], 7); // Coördinaten en zoomniveau voor de initiële kaartweergave
 
     // Voeg een standaard tileLayer toe
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -109,9 +105,6 @@
 
   // Functie om de bevolkingsdata te laden op basis van het geselecteerde jaar of maand
   async function loadData(forceReload = false) {
-    console.log(
-      "loadData: Wordt aangeroepen bij verandering in LayerSwitchComponent en OverlayControlsComponent"
-    );
     // Controleer of er een verandering in laagtype of modus is
     if (
       !forceReload &&
@@ -142,9 +135,6 @@
 
   // Functie om de bevolking te halen voor een gegeven regio, jaar en maand
   function getPopulation(regionCode, year, month) {
-    console.log(
-      "getPopulation: Wordt gebruikt in loadGeoJsonLayer voor MapComponent"
-    );
     // Bepaal de periode string op basis van jaar of maand modus
     const period = isYearMode
       ? `${year}JJ00`
@@ -175,7 +165,6 @@
 
   // Functie om de GeoJSON laag te laden met de bijbehorende stijl en interacties
   function loadGeoJsonLayer() {
-    console.log("loadGeoJsonLayer: MapComponent");
     // Verwijder de huidige laag als deze bestaat om de nieuwe laag te kunnen laden
     if (currentLayer) {
       map.removeLayer(currentLayer);
@@ -258,9 +247,6 @@
 
   // Functie om de kleur te bepalen op basis van de bevolkingsgrootte en laagtype
   function getColor(population, layerType) {
-    console.log(
-      "getColor: Wordt gebruikt in loadGeoJsonLayer voor MapComponent"
-    );
     // Return de kleur afhankelijk van de populatie grootte en of het een gemeente of provincie is
     // Kleurenschaal voor provincies
     if (layerType === "provincie") {
@@ -308,9 +294,6 @@
 
   // Functie om de legenda te highlighten gebaseerd op de huidige bevolking die wordt gehoverd
   function highlightLegend(population) {
-    console.log(
-      "highlightLegend: Wordt aangeroepen bij interactie met MapComponent"
-    );
     // Controleer of we de populatie als een getal hebben.
     population = Number(population);
 
@@ -343,7 +326,6 @@
 
   // Functie om de waarde van de slider te hanteren en de kaart opnieuw te laden
   function handleSliderChange(event) {
-    console.log("handleSliderChange: OverlayControlsComponent");
     // Logica voor het veranderen van de slider waarde
     if (isYearMode) {
       selectedYear = Math.min(Number(event.target.value), 2022); // Aangepast naar 2022
@@ -360,7 +342,6 @@
 
   // Functie om de waarde van de slider te verhogen of te verlagen
   function adjustSliderValue(isIncrement) {
-    console.log("adjustSliderValue: OverlayControlsComponent");
     // Logica voor jaar aanpassen
     if (isYearMode) {
       selectedYear = isIncrement
@@ -381,7 +362,6 @@
 
   // Functie om te schakelen tussen jaar en maand modus
   function toggleMode() {
-    console.log("toggleMode: OverlayControlsComponent");
     // Schakel tussen jaar en maand modus en laad de data opnieuw
     // ...schakelen tussen modi en herladen van data...
     isYearMode = !isYearMode;
@@ -390,9 +370,6 @@
   }
 
   function toggleOverlay() {
-    console.log(
-      "toggleOverlay: Wordt aangeroepen door info-button in MainContainer"
-    );
     showOverlay = !showOverlay;
     console.log("Toggle overlay: ", showOverlay);
   }

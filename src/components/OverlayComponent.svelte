@@ -1,10 +1,12 @@
 <!-- OverlayComponent.svelte -->
 <script>
   export let showOverlay, toggleOverlay;
+
+  $: console.log("Overlay status: ", showOverlay);
 </script>
 
 {#if showOverlay}
-  <div class="overlay">
+  <div class={`overlay ${showOverlay ? "overlay-visible" : ""}`}>
     <button class="close-button" on:click={toggleOverlay}>&times;</button>
     <div class="overlay-content">
       <h2 class="h2-overlay">Project Informatie</h2>
