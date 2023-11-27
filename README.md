@@ -20,7 +20,9 @@ Om dit project te installeren en te gebruiken, volg je de onderstaande stappen:
 
 1. **Clone het Repository:**
    Open je terminal en voer het volgende commando uit om het project te klonen:
-`git clone https://github.com/jouwGithubUsername/nederlandse-bevolkingsontwikkeling-kaart.git`
+```javascript
+git clone https://github.com/jouwGithubUsername/nederlandse-bevolkingsontwikkeling-kaart.git
+```
 
 Vervang `jouwGithubUsername` met je eigen GitHub-gebruikersnaam als je het project hebt geforkt.
 
