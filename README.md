@@ -64,6 +64,15 @@ npm run build
 
 Dit genereert een geoptimaliseerde versie van de applicatie in de `build`-map.
 
+## Live Demo
+
+Dit project is live gehost en kan bekeken en gebruikt worden via de volgende link:
+
+- **Live Demo URL:** [Nederlandse Bevolkingsontwikkeling Kaart](https://tech-track-23-24-choroplethmap-ochre.vercel.app/)
+
+De applicatie is gehost op [Vercel](https://vercel.com), een cloudplatform voor statische sites en Serverless Functions die het makkelijk maakt om moderne webprojecten te deployen. Vercel integreert naadloos met je GitHub-repository, waardoor elke git-push automatisch een nieuwe deploy kan triggeren, wat de workflow voor het uitrollen van nieuwe updates sterk vereenvoudigt.
+
+
 ## Bijdragen
 Bijdragen aan dit project zijn welkom. Neem contact op via [GitHub](https://github.com/Gebruikersnaam)
 
