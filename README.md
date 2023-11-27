@@ -28,14 +28,20 @@ Vervang `jouwGithubUsername` met je eigen GitHub-gebruikersnaam als je het proje
 
 2. **Installatie van Afhankelijkheden:**
 Navigeer naar de hoofdmap van het project en installeer de benodigde afhankelijkheden:
-`cd nederlandse-bevolkingsontwikkeling-kaart`
-`npm install`
+```javascript
+cd nederlandse-bevolkingsontwikkeling-kaart
+```
+```javascript
+npm install
+```
 
 Dit zal alle benodigde node modules installeren die in `package.json` zijn opgesomd.
 
 3. **Start de Ontwikkelingsserver:**
 Start de lokale ontwikkelingsserver met:
-`npm run dev`
+```javascript
+npm run dev
+```
 
 Dit zal de applicatie beschikbaar maken op `http://localhost:3000` (of een andere poort als 3000 bezet is).
 
@@ -50,7 +56,9 @@ Open je webbrowser en ga naar `http://localhost:3000` om de applicatie te bekijk
 
 6. **Bouw voor Productie:**
 Wanneer je klaar bent voor productie, gebruik dan:
-`npm run build`
+```javascript
+npm run build
+```
 
 Dit genereert een geoptimaliseerde versie van de applicatie in de `build`-map.
 
