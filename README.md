@@ -23,13 +23,13 @@ Om dit project te installeren en te gebruiken, volg je de onderstaande stappen:
 1. **Clone het Repository:**
    Open je terminal en voer het volgende commando uit om het project te klonen:
 ```javascript
-git clone https://github.com/MrSmarto/nederlandse-bevolkingsontwikkeling-kaart.git
+git clone https://github.com/MrSmarto/tech-track-23-24.git
 ```
 
 2. **Installatie van Afhankelijkheden:**
 Navigeer naar de hoofdmap van het project en installeer de benodigde afhankelijkheden:
 ```javascript
-cd nederlandse-bevolkingsontwikkeling-kaart
+cd tech-track-23-24
 ```
 ```javascript
 npm install
